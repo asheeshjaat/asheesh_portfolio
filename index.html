@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/32f181d7c4.js" crossorigin="anonymous"></script>
+    <script
+src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"
+></script>
+<link
+ rel="stylesheet"
+ href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+ 
     <title>Asheesh Choudhary</title>
     <style>
         body {
@@ -19,6 +27,7 @@
             display: flex;
             height: 30px;
             font-weight: bold;
+            z-index: 100;
             width: 100%;
             justify-content: center;
             gap: 60px;
@@ -139,7 +148,9 @@
             display: grid;
             grid-template-columns: repeat(2,1fr);
             gap: 30px;
+
         }
+      
         #container4{
             padding-top: 150px;
             width: 70%;
@@ -172,14 +183,14 @@
             margin: auto;
             text-align: center;
         }
-        #contact {
+        /* #contact {
             margin-top: 45px;
             display: flex;
-           
-        }
-        #contact>div{
-            padding-left: 20px;
-        }
+            justify-content: space-evenly;
+        } */
+       /* #contact>div{
+        text-justify: auto;
+       } */
         #contact>div:hover{
             cursor: pointer;
             color: rgb(64,112,244);
@@ -201,6 +212,7 @@
         .heading{
             color: rgb(64,112,244);
             text-decoration: underline;
+            text-align: center;
         }
         .button {
             color: white;
@@ -311,12 +323,132 @@
             #container5{
                 width: 90%;
             }
+          
         }
+        #asheesh{
+                size:60%;
+            }
+            #softskill{
+                text-align: center;
+            }
+            
+            
+            .calendar {
+    color: black;
+    background-color: white;
+    transition: all 0.5s;
+    width: 76%;
+    margin-bottom: 150px;
+  }
+  .calendar:hover {
+    background-color: black;
+  }
+
+  
+  skills-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+  .skills .skills-content .column {
+    width: calc(50% - 30px);
+  }
+  .skills .skills-content .left .text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .skills-content .left{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .skills-content .right{
+    width: 900px;
+  }
+  .skills .skills-content .left p {
+    text-align: justify;
+  }
+  .skills .skills-content .left a {
+    align-items: center;
+    justify-content: center;
+    background: rgb(123, 43, 214);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .skills .skills-content .right .bars {
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+  .skills .skills-content .right .info {
+    display:flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .skills .skills-content .right .line {
+    /* margin-left: 300px; */
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+  }
+  .skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(67, 37, 218);
+    z-index: 5;
+  }
+  .skills-content .right .java::before {
+    width: 90%;
+  }
+  .skills-content .right .sql::before {
+    width: 70%;
+  }
+  .skills-content .right .sb::before {
+    width: 50%;
+  }
+  .skills-content .right .hb::before {
+    width: 50%;
+  }
+  .skills-content .right .html::before {
+    width: 80%;
+  }
+  .skills-content .right .css::before {
+    width: 70%;
+  }
+  .skills-content .right .js::before {
+    width: 60%;
+  }
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
     <a name="home"></a>
-    <div id="navbar">
+    <div  id="navbar">
         <div><a href="#home">Home</a></div>
         <div><a href="#about">About</a></div>
         <div><a href="#skills">Skills</a></div>
@@ -340,7 +472,7 @@
             
         </div>
         <div id="photo">
-            <img src="Asheesh_Photo.jpg">
+            <img src="profle_photo.jpeg">
         </div>
     </div>
     <a name="about"></a>
@@ -351,13 +483,78 @@
             <p id="para">An aspiring backend developer with a specialization in Java and Spring Framework. Looking forward to applying and enhancing my skills and knowledge as a developer.</p>
             <p>Drop a mail asheeshjaat2175@gmail.com</p>
           
-            <a target="_blank" rel="noreferrer" id="cicin" href="https://github.com/asheeshjaat">
+            <!-- <a target="_blank" rel="noreferrer" id="cicin" href="https://github.com/asheeshjaat">
                 <p style="margin-left: 20px;">My Github contributions</p>
                 <img width="95%" style="margin-bottom:20px; "  id="github-contributions" src="https://ghchart.rshah.org/asheeshjaat" href="https://github.com/Yourgithub-asheeshjaat" alt="Yourgithub-username's Github chart" />
-            </a>
+            </a> -->
         </div>
+        <div class="calendar"></div>
         </div>
     </div>
+    <center>
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <!-- <h2 class="title">My skills</h2> -->
+            <div class="skills-content">
+                <div class="column left">
+                    <a>My Skill Stats</a>
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line java"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>MySQL</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="line sql"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Springboot</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="line sb"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>Hibernate</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="line hb"></div>
+                    </div>
+                    <div class="bars">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                    <div class="bars">
+                      <div class="info">
+                          <span>CSS</span>
+                          <span>70%</span>
+                      </div>
+                      <div class="line css"></div>
+                  </div>
+                  <div class="bars">
+                    <div class="info">
+                        <span>JavaScript</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line js"></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+</center>
     <a name="skills"></a>
     <div id="container3">
         <h1 class="heading">Skills</h1>
@@ -372,9 +569,9 @@
                 <div id="mysql"><img src="https://d1.awsstatic.com/asset-repository/products/amazon-rds/1024px-MySQL.ff87215b43fd7292af172e2a5d9b844217262571.png"> MySQL</div>
                 <div>REST API</div>
                 <div>RDBMS</div>
-                <div>Data Structure And Algoritham</div>
+                <div>Data Structure And Algorithm</div>
             </div>
-            <div>
+            <div id="softskill">
                 <h2>Soft Skills</h2>
                 <div>Communication</div>
                 <div>Problem-solving</div>
@@ -391,6 +588,15 @@
     <div id="container4">
         <h1 class="heading">Projects</h1>
         <div id="box">
+            <div>
+                <img id="asheesh" src="swagger-ui.jpeg">
+                <h3>Online Cab Booking Application</h3>
+                <p>A backend project on  Online Cab Booking. User can book the desired cab, Able to view trip history, Admin can modify user/driver details.</p>
+                <p>A collaborative project, built in 5 days by a team of 5 developers.</p>
+                <p>Java | Spring Boot | MySQL | Spring Data Jpa</p>
+                <button id="covid19code" class="button">CODE <i class="fa-brands fa-github"></i></button>
+                <!-- <button id="covid19live" class="button">LIVE <i class="fa-solid fa-arrow-up-right-from-square"></i></button> -->
+            </div>
             <div>
                 <img src="Myntra-project.png">
                 <h3>Myntra E-commerce Website</h3>
@@ -465,6 +671,8 @@
 </body>
 </html>
 <script>
+
+
     let resume = document.getElementById("resume");
     resume.onclick= function(){
         window.open(
@@ -490,6 +698,11 @@
         window.open(
               "https://myntraunit3.netlify.app/", "_blank");
     }
+    let covid19code = document.getElementById("covid19code");
+    covid19code.onclick= function(){
+        window.open(
+              "https://github.com/KapilKumar7/Online-cab-booking", "_blank");
+    }
     let dunzolive = document.getElementById("dunzolive");
     dunzolive.onclick= function(){
         window.open(
@@ -509,7 +722,7 @@
     let portfoliolive = document.getElementById("portfoliolive");
     portfoliolive.onclick= function(){
         window.open(
-              "https://creative-crepe-694e56.netlify.app/", "_blank");
+              "https://idyllic-churros-cbc688.netlify.app/", "_blank");
     }
     let linkedin1 = document.getElementById("linkedin1");
     linkedin1.onclick= function(){
@@ -526,4 +739,12 @@
         window.open(
               "https://leetcode.com/asheeshchoudhary/", "_blank");
     }
+
+    GitHubCalendar(".calendar", "asheeshjaat");
+    // or enable responsive functionality
+    GitHubCalendar(".calendar", "asheeshjaat", { responsive: true });
 </script>
+
+
+
+  
